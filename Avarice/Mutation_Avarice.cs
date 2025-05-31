@@ -215,13 +215,15 @@ namespace XRL.World.Parts.Mutation
                         }
                         else
                         {
-                            SenderMutationPart.LevelMutation(SelectedMutation, SelectedMutation.Level - 1);
+                            SenderMutationPart.LevelMutation(SelectedMutation, SelectedMutation.BaseLevel - 1);
                         }
 
                         // Increase Mutation level for receiver
-                        ReceiverMutationPart.LevelMutation(SelectedMutation, ReceiverMutationPart.GetMutation(SelectedMutation.Name).Level + 1);
+                        var ReceiverMutation = ReceiverMutationPart.GetMutation(SelectedMutation.Name);
 
-                        Popup.Show(SelectedMutation.GetDisplayName() + " is now level {{G|" + ReceiverMutationPart.GetMutation(SelectedMutation.Name).Level + "}}!");
+                        ReceiverMutationPart.LevelMutation(ReceiverMutation, ReceiverMutation.Level + 1);
+
+                        Popup.Show(SelectedMutation.GetDisplayName() + " is now level {{G|" + ReceiverMutationPart.GetMutation(SelectedMutation.Name).BaseLevel + "}}!");
 
                         return true;
                     }
