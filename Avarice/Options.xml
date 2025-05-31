@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option ID="Option_BlackSabin_Avarice_Steal_Cooldown" DisplayText="Cooldown for Avarice"
+    Category="Mods: Avarice" Type="Slider" Default="50" Min="0" Increment="10" Max="2000" />
+  <option ID="Option_BlackSabin_Avarice_Steal_Chance_Attribute" DisplayText="Steal chance for Attributes"
+    Category="Mods: Avarice" Type="Slider" Default="50" Min="0" Increment="1" Max="100" />
+  <option ID="Option_BlackSabin_Avarice_Steal_Chance_Mutation" DisplayText="Steal chance for Mutations"
+    Category="Mods: Avarice" Type="Slider" Default="30" Min="0" Increment="1" Max="100" />
+  <option ID="Option_BlackSabin_Avarice_Steal_Mutation_Random" DisplayText="Steal Mutations at Random" Category="Mods: Avarice" Type="Checkbox" Default="Yes"></option>
+  
+  <option ID="Option_BlackSabin_Avarice_Genesight_Range" DisplayText="Genesight range"
+    Category="Mods: Avarice" Type="Slider" Default="50" Min="5" Increment="5" Max="200" />
+	
+	
+</options>

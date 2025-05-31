@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mutations>
+  <category Name="Mental">
+    <mutation Name="Avarice" Cost="12" MaxSelected="1" Class="Mutation_Avarice" Exclusions="" Code="tq"></mutation>
+    <mutation Name="Quiet Mind" Cost="3" MaxSelected="1" Class="Mutation_QuietMind" Exclusions="" Code="tq"></mutation>
+    <mutation Name="Genesight" Cost="2" MaxSelected="1" Class="Mutation_Genesight" Exclusions="" Code="tq"></mutation>
+ </category>
+</mutations>
