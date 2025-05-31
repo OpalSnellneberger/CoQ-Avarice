@@ -156,7 +156,7 @@ namespace XRL.World.Parts.Mutation
                         else if (ReceiverMutationPart.HasMutation(Mutation))
                         {
                             // We have the mutation, check if it can go past level 1 to be valid
-                            if (Mutation.CanLevel() && ReceiverMutationPart.GetMutation(Mutation.Name).CanIncreaseLevel())
+                            if (Mutation.CanLevel() && ReceiverMutationPart.GetMutation(Mutation.Name).Level < Mutation.GetMaxLevel())
                             {
                                 // We have it, and it can level!
                                 ValidMutations.Add(Mutation);
