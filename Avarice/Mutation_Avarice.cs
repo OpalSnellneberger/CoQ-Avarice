@@ -208,6 +208,13 @@ namespace XRL.World.Parts.Mutation
                     }
                     else if (ReceiverMutationPart.HasMutation(SelectedMutation))
                     {
+                        // Increase Mutation level for receiver
+                        var ReceiverMutation = ReceiverMutationPart.GetMutation(SelectedMutation.Name);
+
+                        ReceiverMutationPart.LevelMutation(ReceiverMutation, ReceiverMutation.Level + 1);
+
+                        Popup.Show(SelectedMutation.GetDisplayName() + " is now level {{G|" + ReceiverMutationPart.GetMutation(SelectedMutation.Name).BaseLevel + "}}!");
+
                         // Decrease Mutation level in target
                         if (SelectedMutation.Level == 1)
                         {
@@ -217,13 +224,6 @@ namespace XRL.World.Parts.Mutation
                         {
                             SenderMutationPart.LevelMutation(SelectedMutation, SelectedMutation.BaseLevel - 1);
                         }
-
-                        // Increase Mutation level for receiver
-                        var ReceiverMutation = ReceiverMutationPart.GetMutation(SelectedMutation.Name);
-
-                        ReceiverMutationPart.LevelMutation(ReceiverMutation, ReceiverMutation.Level + 1);
-
-                        Popup.Show(SelectedMutation.GetDisplayName() + " is now level {{G|" + ReceiverMutationPart.GetMutation(SelectedMutation.Name).BaseLevel + "}}!");
 
                         return true;
                     }
